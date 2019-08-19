@@ -1,0 +1,110 @@
+$body-color: #084aa4;
+$content-area-color: #fafbfd;
+$questions-bck-color: #f3f5f9;
+$txt-color: #4d5467;
+$btn-color: #00d57f;
+$btn-txt-color: #fff;
+$header-size: 24px;
+$base-font-size: 15px;
+$default-padding: 40px;
+$default-radius: 5px;
+
+// reset
+h3,
+label {
+  margin: 0;
+  padding: 0;
+}
+
+//------------------------
+
+label {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+h3 {
+  font-size: $header-size;
+  font-weight: bold;
+  margin-bottom: $default-padding;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button {
+  background: $btn-color;
+  border: none;
+  border-radius: $default-radius;
+  color: $btn-txt-color;
+  padding: 15px 55px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 100px;
+}
+
+body {
+  background: $body-color;
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+  color: $txt-color;
+  font-size: $base-font-size;
+
+  textarea {
+    width: 100%;
+    border: none;
+    padding: 20px 10px 5px 10px;
+    font-size: $base-font-size;
+  }
+
+  .form-element {
+    margin-bottom: $default-padding;
+  }
+
+  main {
+    max-width: 1000px;
+    margin: 20px auto;
+    .inner {
+      background: $content-area-color;
+      display: flex;
+      flex-direction: row;
+      border-radius: $default-radius;
+      overflow: hidden;
+    }
+
+    .questions,
+    .result {
+      width: 50%;
+      padding: $default-padding;
+    }
+
+    &.complete {
+      .inner {
+        background: $questions-bck-color;
+        justify-content: center;
+        > div {
+          padding: $default-padding 0;
+          width: 500px;
+        }
+      }
+      textarea {
+        height: 200px;
+        padding: 10px;
+      }
+      button {
+        margin-top: $default-padding;
+      }
+    }
+    .questions {
+      background: $questions-bck-color;
+    }
+
+    .result p {
+      word-wrap: break-word;
+      line-height: 25px;
+    }
+  }
+}
+
+@import "./media.scss";

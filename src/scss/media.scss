@@ -1,0 +1,27 @@
+@media only screen and (max-device-width: 640px) {
+  button {
+    margin-top: $default-padding;
+  }
+  main {
+    margin: 20px !important;
+
+    .inner {
+      flex-direction: column !important;
+    }
+
+    &.complete {
+      .inner {
+        margin: 0 !important;
+        > div {
+          padding: $default-padding !important;
+          width: inherit !important;
+        }
+      }
+    }
+    .questions,
+    .result,
+    .complete {
+      width: 100% !important;
+    }
+  }
+}
